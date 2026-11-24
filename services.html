@@ -165,6 +165,50 @@ body p { font-size:18px; line-height:1.75; }
  .section-head h2, .intro-copy h2 { font-size:36px; }
 }
 
+
+/* Larger DFC identity and readable navigation across every page */
+.site-header .nav-wrap{max-width:1560px;min-height:142px;padding:14px clamp(20px,3vw,48px);gap:24px}
+.site-header .brand{min-width:420px;gap:22px}
+.site-header .brand img{width:142px;height:142px;flex:0 0 142px;object-fit:contain}
+.site-header .brand strong{font-size:clamp(27px,2.15vw,36px);line-height:1.05;letter-spacing:.035em}
+.site-header .brand small{font-size:17px;margin-top:8px;letter-spacing:.04em}
+.site-header .nav-links{gap:clamp(10px,1.15vw,20px)}
+.site-header .nav-links a{font-size:16px}
+.site-header .nav-links .ai-link{padding:12px 17px}
+body{font-size:18px}
+p{line-height:1.75}
+@media(max-width:1100px){
+ .site-header .nav-wrap{min-height:112px}
+ .site-header .brand{min-width:0;gap:14px}
+ .site-header .brand img{width:104px;height:104px;flex-basis:104px}
+ .site-header .brand strong{font-size:clamp(21px,2.5vw,29px)}
+ .site-header .brand small{font-size:14px}
+ .site-header .nav-links{gap:8px}
+ .site-header .nav-links a{font-size:13px}
+}
+@media(max-width:650px){
+ .site-header .nav-wrap{min-height:0;padding:10px 16px}
+ .site-header .brand{gap:12px}
+ .site-header .brand img{width:82px;height:82px;flex-basis:82px}
+ .site-header .brand strong{font-size:20px;white-space:normal}
+ .site-header .brand small{font-size:12px}
+ .site-header .menu-btn{font-size:20px;padding:10px 13px}
+ body{font-size:16px}
+}
+/* Homepage headline is a single horizontal statement; remove secondary hero content */
+.hero-video-backdrop .hero-layout{min-height:640px;padding:70px clamp(28px,6vw,90px)}
+.hero-video-backdrop .hero-inner{max-width:100%;width:100%;padding:24px 0}
+.hero-video-backdrop .hero-inner h1{font-size:clamp(54px,6.4vw,100px);line-height:1.02;letter-spacing:-.035em;white-space:nowrap;max-width:none}
+.hero-video-backdrop .hero-inner h1 br{display:none}
+@media(max-width:900px){
+ .hero-video-backdrop .hero-layout{min-height:560px;padding:45px 26px}
+ .hero-video-backdrop .hero-inner h1{font-size:clamp(46px,7.5vw,72px);white-space:normal}
+}
+@media(max-width:650px){
+ .hero-video-backdrop .hero-layout{min-height:520px;padding:36px 20px}
+ .hero-video-backdrop .hero-inner h1{font-size:clamp(42px,10vw,60px);white-space:normal}
+}
+
 </style></head><body><header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><img src="DFC%20LOGO.png" alt="Defence Focus Club logo"><span><strong>DEFENCE FOCUS CLUB</strong><small>TKM COLLEGE OF ENGINEERING</small></span></a><button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button><nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">The Services</a><a href="activities.html">What We Do</a><a href="events.html">Events</a><a href="execom.html">Execom</a><a class="ai-link" href="../index.html">Defence Track AI ↗</a></nav></div></header><main><section class="page-intro"><div class="eyebrow">Defence Focus Club · TKMCE</div><h1>The Indian Armed Forces</h1><p>Explore the Army, Navy and Air Force through selected public imagery and an official service film.</p></section><section class="media-section" id="forces"><div class="section media-wrap">
 <div class="section-head"><div class="eyebrow">The services · In focus</div><h2>Three services. One purpose.</h2><p>A visual glimpse into the people, professionalism and service ethos of the Indian Armed Forces.</p></div>
 <div class="service-gallery">
