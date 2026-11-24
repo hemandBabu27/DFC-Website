@@ -115,32 +115,70 @@ body{font-family:'Source Sans 3',sans-serif;font-size:16px}h1,h2,h3{font-family:
 @media(max-width:900px){.service-gallery{height:330px;grid-template-columns:1fr 1fr}.service-tile:first-child{grid-row:span 2}.film-layout{grid-template-columns:1fr;gap:24px}.execom-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:650px){.service-gallery{height:auto;grid-template-columns:1fr 1fr}.service-tile{height:210px}.service-tile:first-child{grid-row:auto;grid-column:span 2;height:230px}.service-overlay{left:14px;bottom:14px}.service-overlay strong{font-size:22px}.film-layout{gap:18px}.leader-card{padding:15px;gap:14px}.silhouette{width:62px;height:62px;flex-basis:62px}.silhouette:before{top:10px;left:22px;width:19px;height:21px}.silhouette:after{left:10px;width:43px;height:36px}.execom-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hierarchy-connector{height:22px}.section{padding-top:52px;padding-bottom:52px}}
 @media(prefers-reduced-motion:reduce){.service-tile img,.member{transition:none}}
-html{scroll-behavior:auto}.section{padding:64px 28px}.section-head{margin-bottom:28px}.hero{min-height:520px}.hero-inner{padding-top:78px;padding-bottom:95px}.home-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.home-links>a{display:block;padding:24px;border:1px solid var(--line);border-radius:14px;background:#fff;transition:transform .25s,box-shadow .25s,border-color .25s}.home-links>a:hover{transform:translateY(-5px);border-color:#9ab8d7;box-shadow:0 14px 30px #102b4d12}.home-links span{font-size:11px;font-weight:800;letter-spacing:.13em;color:var(--blue)}.home-links h3{font-size:23px;color:var(--navy);margin:12px 0 6px}.home-links p{font-size:15px;color:var(--muted);margin:0 0 17px;line-height:1.6}.home-links b{font-size:14px;color:var(--blue)}.page-intro{background:linear-gradient(110deg,#102b4d,#24558a);color:#fff;padding:52px max(28px,calc((100% - 1304px)/2))}.page-intro .eyebrow{color:#b9d7f5}.page-intro h1{font-size:clamp(34px,4vw,52px);margin:10px 0}.page-intro p{max-width:720px;color:#d6e2ef;font-size:17px;margin:0;line-height:1.65}.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}.reveal.is-visible{opacity:1;transform:none}@media(max-width:850px){.home-links{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.section{padding:48px 20px}.home-links{grid-template-columns:1fr}.page-intro{padding:42px 20px}.hero{min-height:530px}}@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.home-links>a{transition:none}}</style></head><body><header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><img src="DFC%20LOGO.png" alt="Defence Focus Club logo"><span><strong>DEFENCE FOCUS CLUB</strong><small>TKM COLLEGE OF ENGINEERING</small></span></a><button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button><nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">The Services</a><a href="activities.html">What We Do</a><a href="vision.html">Vision & Mission</a><a href="events.html">Events</a><a href="execom.html">Execom</a><a class="ai-link" href="../index.html">Defence Track AI ↗</a></nav></div></header><main><section class="page-intro"><div class="eyebrow">Defence Focus Club · TKMCE</div><h1>Meet the Team</h1><p>Faculty guidance, student leadership and the executive committee behind DFC.</p></section><section class="section" id="execom"><div class="section-head"><div class="eyebrow">The people behind the club</div><h2>Executive committee</h2><p>Meet the faculty coordinator and student team behind Defence Focus Club.</p></div>
+html{scroll-behavior:auto}.section{padding:64px 28px}.section-head{margin-bottom:28px}.hero{min-height:520px}.hero-inner{padding-top:78px;padding-bottom:95px}.home-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.home-links>a{display:block;padding:24px;border:1px solid var(--line);border-radius:14px;background:#fff;transition:transform .25s,box-shadow .25s,border-color .25s}.home-links>a:hover{transform:translateY(-5px);border-color:#9ab8d7;box-shadow:0 14px 30px #102b4d12}.home-links span{font-size:11px;font-weight:800;letter-spacing:.13em;color:var(--blue)}.home-links h3{font-size:23px;color:var(--navy);margin:12px 0 6px}.home-links p{font-size:15px;color:var(--muted);margin:0 0 17px;line-height:1.6}.home-links b{font-size:14px;color:var(--blue)}.page-intro{background:linear-gradient(110deg,#102b4d,#24558a);color:#fff;padding:52px max(28px,calc((100% - 1304px)/2))}.page-intro .eyebrow{color:#b9d7f5}.page-intro h1{font-size:clamp(34px,4vw,52px);margin:10px 0}.page-intro p{max-width:720px;color:#d6e2ef;font-size:17px;margin:0;line-height:1.65}.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}.reveal.is-visible{opacity:1;transform:none}@media(max-width:850px){.home-links{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.section{padding:48px 20px}.home-links{grid-template-columns:1fr}.page-intro{padding:42px 20px}.hero{min-height:530px}}@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.home-links>a{transition:none}}
+/* Executive hierarchy layout aligned to the supplied reference */
+#execom{max-width:1200px;padding-top:38px;padding-bottom:54px}
+#execom>.section-head{max-width:700px;margin:0 auto 24px;text-align:center}
+#execom>.section-head .eyebrow{justify-content:center}
+.hierarchy{position:relative;max-width:820px;margin:0 auto;text-align:center}
+.hierarchy-level{gap:9px}
+.hierarchy-label{font-size:10px;letter-spacing:.18em;color:#24558a}
+.leader-card{width:348px;min-height:79px;padding:12px 15px;gap:13px;text-align:left;border:1px solid #d7e2ef;border-radius:11px;box-shadow:0 7px 22px #102b4d08}
+.leader-card h3{font-size:16px;line-height:1.2;margin:3px 0 2px}
+.leader-card p{font-size:11px;line-height:1.3}
+.leader-card .role{font-size:9px;letter-spacing:.12em}
+.silhouette{width:51px;height:51px;flex-basis:51px;background:linear-gradient(145deg,#dce8f5,#aec5df)}
+.silhouette:before{top:9px;left:18px;width:15px;height:17px}
+.silhouette:after{left:8px;bottom:-6px;width:35px;height:29px}
+.faculty-leader{border-left:2px solid #24558a}
+.student-leader{border-left:2px solid #5b8ab8}
+.hierarchy-connector{height:28px;background:#9bb1c9;width:1px}
+.team-heading,.executive-heading{margin:18px 0 9px}
+.team-heading p,.executive-heading p{display:none}
+.team-lead-card{position:relative;justify-content:center}
+.team-leader{width:294px;min-height:79px;background:#f8fbff}
+.team-lead-card:before{content:"";position:absolute;left:calc(50% - 190px);top:-125px;width:72px;height:126px;border-left:3px solid #d94b4b;border-bottom:3px solid #d94b4b;border-radius:0 0 0 42px;pointer-events:none}
+.execom-grid{max-width:900px;margin:0 auto;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.member{min-height:76px;padding:13px 10px;border-radius:10px;text-align:center}
+.member .role{font-size:9px;letter-spacing:.11em}
+.member h3{font-size:14px;margin:6px 0 0}
+.member-avatar{display:none}
+.edit-note{display:none}
+@media(max-width:900px){.execom-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:650px}}
+@media(max-width:650px){
+#execom{padding:34px 15px 44px}
+.leader-card{width:min(100%,348px)}
+.team-leader{width:min(100%,294px)}
+.team-lead-card:before{left:2px;top:-122px;width:34px;height:124px}
+.execom-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.member{padding:12px 7px}
+}
+</style></head><body><header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><img src="DFC%20LOGO.png" alt="Defence Focus Club logo"><span><strong>DEFENCE FOCUS CLUB</strong><small>TKM COLLEGE OF ENGINEERING</small></span></a><button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button><nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">The Services</a><a href="activities.html">What We Do</a><a href="vision.html">Vision & Mission</a><a href="events.html">Events</a><a href="execom.html">Execom</a><a class="ai-link" href="../index.html">Defence Track AI ↗</a></nav></div></header><main><section class="page-intro"><div class="eyebrow">Defence Focus Club · TKMCE</div><h1>Meet the Team</h1><p>Faculty guidance, student leadership and the executive committee behind DFC.</p></section><section class="section" id="execom"><div class="section-head"><div class="eyebrow">The people behind the club</div><h2>Executive committee</h2><p>Meet the faculty coordinator and student team behind Defence Focus Club.</p></div>
 
 <div class="hierarchy">
 <div class="hierarchy-level"><span class="hierarchy-label">FACULTY GUIDANCE</span><article class="leader-card faculty-leader"><div class="silhouette"></div><div><span class="role">Faculty Coordinator</span><h3>Dr. Sharos H</h3><p>Assistant Professor · Department of Mechanical Engineering</p></div></article></div>
 <div class="hierarchy-connector"></div>
-<div class="hierarchy-level"><span class="hierarchy-label">STUDENT LEADERSHIP</span><article class="leader-card student-leader"><div class="silhouette"></div><div><span class="role">Student Coordinator</span><h3>Kashinath</h3><p>Defence Focus Club · TKMCE</p></div></article></div>
+<div class="hierarchy-level"><span class="hierarchy-label">STUDENT LEADERSHIP</span><article class="leader-card student-leader"><div class="silhouette"></div><div><span class="role">Student Coordinator</span><h3>Kashinath</h3></div></article></div>
 <div class="hierarchy-connector"></div>
-<div class="team-heading"><span class="hierarchy-label">STUDENT COORDINATOR TEAM</span><p>Supporting coordination, communication and club activities.</p></div>
-<div class="team-lead-card"><article class="leader-card team-leader"><div class="silhouette"></div><div><span class="role">Student Coordination Team</span><h3>Adhi</h3><p>Defence Focus Club · TKMCE</p></div></article></div>
-<div class="executive-heading"><span class="hierarchy-label">EXECUTIVE COMMITTEE</span><p>Functional teams supporting the club's programmes, operations and communication.</p></div>
-<div class="execom-grid"><article class="member"><div class="member-avatar" aria-hidden="true">AD</div><span class="role">Documentation</span><h3>Akshay Das</h3><p>Defence Focus Club · TKMCE</p></article>
+<div class="team-heading"><span class="hierarchy-label">STUDENT COORDINATOR TEAM</span></div>
+<div class="team-lead-card"><article class="leader-card team-leader"><div class="silhouette"></div><div><span class="role">Student Coordination Team</span><h3>Adhi</h3></div></article></div>
+<div class="executive-heading"><span class="hierarchy-label">EXECUTIVE COMMITTEE</span></div>
+<div class="execom-grid"><article class="member"><div class="member-avatar" aria-hidden="true">AD</div><span class="role">Documentation</span><h3>Akshay Das</h3></article>
 
-<article class="member"><div class="member-avatar" aria-hidden="true">A</div><span class="role">Program Committee</span><h3>Adithyan</h3><p>Defence Focus Club · TKMCE</p></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">AK</div><span class="role">4th Year Representative</span><h3>Akshith K</h3><p>Defence Focus Club · TKMCE</p></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">A</div><span class="role">Operations</span><h3>Amnith</h3><p>Defence Focus Club · TKMCE</p></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">A</div><span class="role">Program Committee</span><h3>Anna</h3><p>Defence Focus Club · TKMCE</p></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">A</div><span class="role">Program Committee</span><h3>Anusree</h3><p>Defence Focus Club · TKMCE</p></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">A</div><span class="role">2nd Year Representative</span><h3>Aswin</h3><p>Defence Focus Club · TKMCE</p></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">DD</div><span class="role">Operations</span><h3>Deeya DA</h3><p>Defence Focus Club · TKMCE</p></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">DA</div><span class="role">Operations</span><h3>Dev Anand A L</h3><p>Defence Focus Club · TKMCE</p></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">D</div><span class="role">4th Year Representative</span><h3>Devna</h3><p>Defence Focus Club · TKMCE</p></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">H</div><span class="role">Documentation</span><h3>Hemand</h3><p>Defence Focus Club · TKMCE</p></article>
+<article class="member"><div class="member-avatar" aria-hidden="true">A</div><span class="role">Program Committee</span><h3>Adithyan</h3></article>
+<article class="member"><div class="member-avatar" aria-hidden="true">AK</div><span class="role">4th Year Representative</span><h3>Akshith K</h3></article>
+<article class="member"><div class="member-avatar" aria-hidden="true">A</div><span class="role">Operations</span><h3>Amnith</h3></article>
+<article class="member"><div class="member-avatar" aria-hidden="true">A</div><span class="role">Program Committee</span><h3>Anna</h3></article>
+<article class="member"><div class="member-avatar" aria-hidden="true">A</div><span class="role">Program Committee</span><h3>Anusree</h3></article>
+<article class="member"><div class="member-avatar" aria-hidden="true">A</div><span class="role">2nd Year Representative</span><h3>Aswin</h3></article>
+<article class="member"><div class="member-avatar" aria-hidden="true">DD</div><span class="role">Operations</span><h3>Deeya DA</h3></article>
+<article class="member"><div class="member-avatar" aria-hidden="true">DA</div><span class="role">Operations</span><h3>Dev Anand A L</h3></article>
+<article class="member"><div class="member-avatar" aria-hidden="true">D</div><span class="role">4th Year Representative</span><h3>Devna</h3></article>
+<article class="member"><div class="member-avatar" aria-hidden="true">H</div><span class="role">Documentation</span><h3>Hemand</h3></article>
 
-<article class="member"><div class="member-avatar" aria-hidden="true">KV</div><span class="role">Operations</span><h3>Krishnapriya V</h3><p>Defence Focus Club · TKMCE</p></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">L</div><span class="role">3rd Year Representative</span><h3>Lubaba</h3><p>Defence Focus Club · TKMCE</p></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">MA</div><span class="role">Design & Media</span><h3>Muhammed Afham C</h3><p>Defence Focus Club · TKMCE</p></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">SS</div><span class="role">Design & Media</span><h3>Sajna Stanly</h3><p>Defence Focus Club · TKMCE</p></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">MS</div><span class="role">Design & Media</span><h3>Mohammed Sinan</h3><p>Defence Focus Club · TKMCE</p></article></div>
+<article class="member"><div class="member-avatar" aria-hidden="true">KV</div><span class="role">Operations</span><h3>Krishnapriya V</h3></article>
+<article class="member"><div class="member-avatar" aria-hidden="true">L</div><span class="role">3rd Year Representative</span><h3>Lubaba</h3></article>
+<article class="member"><div class="member-avatar" aria-hidden="true">MA</div><span class="role">Design & Media</span><h3>Muhammed Afham C</h3></article>
+<article class="member"><div class="member-avatar" aria-hidden="true">SS</div><span class="role">Design & Media</span><h3>Sajna Stanly</h3></article>
+<article class="member"><div class="member-avatar" aria-hidden="true">MS</div><span class="role">Design & Media</span><h3>Mohammed Sinan</h3></article></div>
 <p class="edit-note">Student portfolios are shown with initials until the individual profile photographs are added.</p></section></main><footer class="footer"><div class="footer-inner"><a class="footer-brand" href="index.html"><img src="DFC%20LOGO.png" alt=""><div><strong>DEFENCE FOCUS CLUB · TKMCE</strong><br><small>Purpose · Discipline · Service</small></div></a><div class="footer-links"><a href="about.html">About</a><a href="services.html">Services</a><a href="events.html">Events</a><a href="execom.html">Execom</a></div><small>© <span id="year"></span> Defence Focus Club, TKMCE</small></div></footer><script>const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');if(menuBtn&&navLinks){menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')))}const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();const reveals=document.querySelectorAll('.section-head,.intro-photo,.intro-copy,.vm-card,.event-card,.focus-card,.member,.leader-card,.faq-item,.service-tile,.film-copy');reveals.forEach(el=>el.classList.add('reveal'));if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.08});reveals.forEach(el=>io.observe(el))}else reveals.forEach(el=>el.classList.add('is-visible'));const track=document.getElementById('eventTrack'),prev=document.getElementById('prevEvent'),next=document.getElementById('nextEvent');if(track&&prev&&next){prev.addEventListener('click',()=>track.scrollBy({left:-track.clientWidth*.8,behavior:'smooth'}));next.addEventListener('click',()=>track.scrollBy({left:track.clientWidth*.8,behavior:'smooth'}))}</script></body></html>
