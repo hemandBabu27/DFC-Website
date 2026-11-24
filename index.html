@@ -284,6 +284,20 @@ p{line-height:1.75}
  .hero-video-backdrop .hero-inner h1{font-size:clamp(42px,10vw,60px);white-space:normal}
 }
 
+
+/* Transparent floating header so the homepage video remains visible behind it */
+.site-header{
+  position:absolute !important;
+  top:0;left:0;right:0;
+  width:100%;
+  background:rgba(8,28,51,.16) !important;
+  -webkit-backdrop-filter:blur(3px);
+  backdrop-filter:blur(3px);
+  border-bottom:1px solid rgba(255,255,255,.12) !important;
+  box-shadow:none !important;
+}
+.site-header .nav-wrap{background:transparent !important}
+
 </style></head><body><header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><img src="DFC%20LOGO.png" alt="Defence Focus Club logo"><span><strong>DEFENCE FOCUS CLUB</strong><small>TKM COLLEGE OF ENGINEERING</small></span></a><button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button><nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">The Services</a><a href="activities.html">What We Do</a><a href="events.html">Events</a><a href="execom.html">Execom</a><a class="ai-link" href="../index.html">Defence Track AI ↗</a></nav></div></header><main><section class="hero hero-home hero-video-backdrop">
   <div class="hero-video-layer" aria-hidden="true"><video id="dfcHomeBackdrop" autoplay muted loop playsinline preload="auto"><source src="https://www.dropbox.com/scl/fi/vdkb0xmqp715k7pp0x26j/dfc-backdrop.mp4?rlkey=yo92sfzq3mrfssdbidwnse9yi&raw=1" type="video/mp4"></video></div>
   <div class="hero-video-shade"></div>
