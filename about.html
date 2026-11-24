@@ -165,6 +165,50 @@ body p { font-size:18px; line-height:1.75; }
  .section-head h2, .intro-copy h2 { font-size:36px; }
 }
 
+
+/* Larger DFC identity and readable navigation across every page */
+.site-header .nav-wrap{max-width:1560px;min-height:142px;padding:14px clamp(20px,3vw,48px);gap:24px}
+.site-header .brand{min-width:420px;gap:22px}
+.site-header .brand img{width:142px;height:142px;flex:0 0 142px;object-fit:contain}
+.site-header .brand strong{font-size:clamp(27px,2.15vw,36px);line-height:1.05;letter-spacing:.035em}
+.site-header .brand small{font-size:17px;margin-top:8px;letter-spacing:.04em}
+.site-header .nav-links{gap:clamp(10px,1.15vw,20px)}
+.site-header .nav-links a{font-size:16px}
+.site-header .nav-links .ai-link{padding:12px 17px}
+body{font-size:18px}
+p{line-height:1.75}
+@media(max-width:1100px){
+ .site-header .nav-wrap{min-height:112px}
+ .site-header .brand{min-width:0;gap:14px}
+ .site-header .brand img{width:104px;height:104px;flex-basis:104px}
+ .site-header .brand strong{font-size:clamp(21px,2.5vw,29px)}
+ .site-header .brand small{font-size:14px}
+ .site-header .nav-links{gap:8px}
+ .site-header .nav-links a{font-size:13px}
+}
+@media(max-width:650px){
+ .site-header .nav-wrap{min-height:0;padding:10px 16px}
+ .site-header .brand{gap:12px}
+ .site-header .brand img{width:82px;height:82px;flex-basis:82px}
+ .site-header .brand strong{font-size:20px;white-space:normal}
+ .site-header .brand small{font-size:12px}
+ .site-header .menu-btn{font-size:20px;padding:10px 13px}
+ body{font-size:16px}
+}
+/* Homepage headline is a single horizontal statement; remove secondary hero content */
+.hero-video-backdrop .hero-layout{min-height:640px;padding:70px clamp(28px,6vw,90px)}
+.hero-video-backdrop .hero-inner{max-width:100%;width:100%;padding:24px 0}
+.hero-video-backdrop .hero-inner h1{font-size:clamp(54px,6.4vw,100px);line-height:1.02;letter-spacing:-.035em;white-space:nowrap;max-width:none}
+.hero-video-backdrop .hero-inner h1 br{display:none}
+@media(max-width:900px){
+ .hero-video-backdrop .hero-layout{min-height:560px;padding:45px 26px}
+ .hero-video-backdrop .hero-inner h1{font-size:clamp(46px,7.5vw,72px);white-space:normal}
+}
+@media(max-width:650px){
+ .hero-video-backdrop .hero-layout{min-height:520px;padding:36px 20px}
+ .hero-video-backdrop .hero-inner h1{font-size:clamp(42px,10vw,60px);white-space:normal}
+}
+
 </style></head><body><header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><img src="DFC%20LOGO.png" alt="Defence Focus Club logo"><span><strong>DEFENCE FOCUS CLUB</strong><small>TKM COLLEGE OF ENGINEERING</small></span></a><button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button><nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">The Services</a><a href="activities.html">What We Do</a><a href="events.html">Events</a><a href="execom.html">Execom</a><a class="ai-link" href="../index.html">Defence Track AI ↗</a></nav></div></header><main><section class="page-intro"><div class="eyebrow">Defence Focus Club · TKMCE</div><h1>About</h1><p>Get to know the student community, its purpose and the values behind Defence Focus Club.</p></section><section class="section" id="about"><div class="intro-grid"><div class="intro-photo"><span class="photo-caption">Purpose · Discipline · Service</span></div><div class="intro-copy"><div class="eyebrow">Who we are</div><h2>A campus community with a call to serve.</h2><p>Defence Focus Club (DFC), TKMCE, brings students together to explore defence careers, learn from experts and build leadership through awareness, teamwork and purposeful activities.</p><div class="values-row"><div class="value"><strong>Awareness</strong><span>Explore opportunities</span></div><div class="value"><strong>Leadership</strong><span>Grow with purpose</span></div><div class="value"><strong>Community</strong><span>Learn together</span></div></div></div></div></section>
 
 </main><footer class="footer"><div class="footer-inner"><a class="footer-brand" href="index.html"><img src="DFC%20LOGO.png" alt=""><div><strong>DEFENCE FOCUS CLUB · TKMCE</strong><br><small>Purpose · Discipline · Service</small></div></a><div class="footer-links"><a href="about.html">About</a><a href="services.html">Services</a><a href="events.html">Events</a><a href="execom.html">Execom</a></div><small>© <span id="year"></span> Defence Focus Club, TKMCE</small></div></footer><script>const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');if(menuBtn&&navLinks){menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')))}const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();const reveals=document.querySelectorAll('.section-head,.intro-photo,.intro-copy,.vm-card,.event-card,.focus-card,.member,.leader-card,.faq-item,.service-tile,.film-copy');reveals.forEach(el=>el.classList.add('reveal'));if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.08});reveals.forEach(el=>io.observe(el))}else reveals.forEach(el=>el.classList.add('is-visible'));const track=document.getElementById('eventTrack'),prev=document.getElementById('prevEvent'),next=document.getElementById('nextEvent');if(track&&prev&&next){prev.addEventListener('click',()=>track.scrollBy({left:-track.clientWidth*.8,behavior:'smooth'}));next.addEventListener('click',()=>track.scrollBy({left:track.clientWidth*.8,behavior:'smooth'}))}</script></body></html>
