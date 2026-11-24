@@ -298,12 +298,40 @@ p{line-height:1.75}
 }
 .site-header .nav-wrap{background:transparent !important}
 
+
+/* Stronger hero headline; move club tagline below it as requested */
+.hero-video-backdrop .hero-inner h1{
+  font-size:clamp(64px,7.1vw,116px) !important;
+  line-height:1.04;
+  letter-spacing:-.038em;
+  margin:0 !important;
+}
+.hero-video-backdrop .hero-inner h1 span{
+  display:inline-block;
+  margin-left:.16em;
+}
+.hero-video-backdrop .hero-inner .hero-club-tagline{
+  margin-top:24px;
+  font-size:14px;
+  letter-spacing:.24em;
+  line-height:1.5;
+  color:#d9eaff;
+}
+@media(max-width:900px){
+ .hero-video-backdrop .hero-inner h1{font-size:clamp(54px,8.5vw,84px) !important;white-space:normal}
+ .hero-video-backdrop .hero-inner h1 span{margin-left:.1em}
+}
+@media(max-width:650px){
+ .hero-video-backdrop .hero-inner h1{font-size:clamp(43px,10.5vw,66px) !important}
+ .hero-video-backdrop .hero-inner .hero-club-tagline{font-size:11px;letter-spacing:.18em;margin-top:18px}
+}
+
 </style></head><body><header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><img src="DFC%20LOGO.png" alt="Defence Focus Club logo"><span><strong>DEFENCE FOCUS CLUB</strong><small>TKM COLLEGE OF ENGINEERING</small></span></a><button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button><nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">The Services</a><a href="activities.html">What We Do</a><a href="events.html">Events</a><a href="execom.html">Execom</a><a class="ai-link" href="../index.html">Defence Track AI ↗</a></nav></div></header><main><section class="hero hero-home hero-video-backdrop">
   <div class="hero-video-layer" aria-hidden="true"><video id="dfcHomeBackdrop" autoplay muted loop playsinline preload="auto"><source src="https://www.dropbox.com/scl/fi/vdkb0xmqp715k7pp0x26j/dfc-backdrop.mp4?rlkey=yo92sfzq3mrfssdbidwnse9yi&raw=1" type="video/mp4"></video></div>
   <div class="hero-video-shade"></div>
   <div class="hero-layout"><div class="hero-inner">
-    <div class="eyebrow">Defence Focus Club · TKMCE</div>
     <h1>Beyond the uniform.<br><span>Beyond limits.</span></h1>
+    <div class="eyebrow hero-club-tagline">Defence Focus Club · TKMCE</div>
     
   </div></div>
   <div class="backdrop-progress" aria-hidden="true"><span id="backdropProgressBar"></span></div>
