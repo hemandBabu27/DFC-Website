@@ -157,32 +157,100 @@ html{scroll-behavior:auto}.section{padding:64px 28px}.section-head{margin-bottom
 /* Stronger club identity in the primary navigation */
 .brand{gap:15px;min-width:270px}.brand img{width:82px;height:82px}.brand strong{font-size:21px;letter-spacing:.055em}.brand small{font-size:14px;margin-top:5px}
 @media(max-width:650px){.brand{gap:10px}.brand img{width:66px;height:66px}.brand strong{font-size:17px}.brand small{font-size:11px}}
+
+/* Clear reporting tree: faculty parent, two student leads at equal level */
+#execom{max-width:1240px}
+.hierarchy-tree{max-width:1120px;margin:0 auto}
+.parent-node,.peer-node{display:flex;flex-direction:column;align-items:center;gap:9px}
+.parent-node .leader-card{width:min(100%,430px)}
+.branch-connector{height:42px;width:min(520px,75%);margin:0 auto;position:relative;border-top:1.5px solid #9bb1c9;top:21px}
+.branch-connector:before{content:"";position:absolute;left:50%;top:-22px;height:22px;border-left:1.5px solid #9bb1c9}
+.branch-connector span{position:absolute;left:50%;top:0;height:21px;border-left:1.5px solid #9bb1c9}
+.leadership-peers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:900px;margin:0 auto}
+.peer-node .leader-card{width:min(100%,390px);height:88px}
+.leader-card{box-shadow:0 7px 22px #102b4d08}
+.leader-card p{margin-top:4px}
+.student-leader,.team-leader{border-left:3px solid #5b8ab8;background:#fff}
+.team-lead-card:before{display:none!important}
+.executive-heading{text-align:center;margin:38px 0 18px}
+.position-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:1120px;margin:0 auto}
+.position-group{padding:17px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 7px 22px #102b4d06}
+.position-group>h3{font-size:16px;color:var(--navy);margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.position-members{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.position-members .member{min-width:0;min-height:66px;padding:11px 9px;background:#f8fbff;border-radius:9px;text-align:left}
+.position-members .member .role{display:block;font-size:9px;line-height:1.3;letter-spacing:.07em;color:#55718f}
+.position-members .member h3{font-size:14px;line-height:1.25;margin:5px 0 0;overflow-wrap:anywhere;color:var(--navy)}
+.position-members .member p{display:none}
+#execom .edit-note{display:none}
+@media(max-width:720px){
+ .leadership-peers{gap:12px}
+ .peer-node .leader-card{padding:12px;gap:10px;height:auto;min-height:82px}
+ .position-groups{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+ .leadership-peers{grid-template-columns:1fr;gap:18px}
+ .peer-node .leader-card{width:min(100%,360px)}
+ .branch-connector{width:70%}
+ .position-members{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 </style></head><body><header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><img src="DFC%20LOGO.png" alt="Defence Focus Club logo"><span><strong>DEFENCE FOCUS CLUB</strong><small>TKM COLLEGE OF ENGINEERING</small></span></a><button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button><nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">The Services</a><a href="activities.html">What We Do</a><a href="events.html">Events</a><a href="execom.html">Execom</a><a class="ai-link" href="../index.html">Defence Track AI ↗</a></nav></div></header><main><section class="page-intro"><div class="eyebrow">Defence Focus Club · TKMCE</div><h1>Meet the Team</h1><p>Faculty guidance, student leadership and the executive committee behind DFC.</p></section><section class="section" id="execom"><div class="section-head"><div class="eyebrow">The people behind the club</div><h2>Executive committee</h2><p>Meet the faculty coordinator and student team behind Defence Focus Club.</p></div>
 
-<div class="hierarchy">
-<div class="hierarchy-level"><span class="hierarchy-label">FACULTY GUIDANCE</span><article class="leader-card faculty-leader"><div class="silhouette"></div><div><span class="role">Faculty Coordinator</span><h3>Dr. Sharos H</h3><p>Assistant Professor · Department of Mechanical Engineering</p></div></article></div>
-<div class="hierarchy-connector"></div>
-<div class="hierarchy-level"><span class="hierarchy-label">STUDENT LEADERSHIP</span><article class="leader-card student-leader"><div class="silhouette"></div><div><span class="role">Student Coordinator</span><h3>Kashinath</h3></div></article></div>
-<div class="hierarchy-connector"></div>
-<div class="team-heading"><span class="hierarchy-label">STUDENT COORDINATOR TEAM</span></div>
-<div class="team-lead-card"><article class="leader-card team-leader"><div class="silhouette"></div><div><span class="role">Student Coordination Team</span><h3>Adhi</h3></div></article></div>
-<div class="executive-heading"><span class="hierarchy-label">EXECUTIVE COMMITTEE</span></div>
-<div class="execom-grid"><article class="member"><div class="member-avatar" aria-hidden="true">AD</div><span class="role">Documentation</span><h3>Akshay Das</h3></article>
+<div class="hierarchy hierarchy-tree">
+  <div class="parent-node">
+    <span class="hierarchy-label">FACULTY IN CHARGE</span>
+    <article class="leader-card faculty-leader">
+      <div class="silhouette" aria-hidden="true"></div>
+      <div><span class="role">Faculty Coordinator</span><h3>Dr. Sharos H</h3><p>Assistant Professor · Department of Mechanical Engineering</p></div>
+    </article>
+  </div>
 
-<article class="member"><div class="member-avatar" aria-hidden="true">A</div><span class="role">Program Committee</span><h3>Adithyan</h3></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">AK</div><span class="role">4th Year Representative</span><h3>Akshith K</h3></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">A</div><span class="role">Operations</span><h3>Amnith</h3></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">A</div><span class="role">Program Committee</span><h3>Anna</h3></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">A</div><span class="role">Program Committee</span><h3>Anusree</h3></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">A</div><span class="role">2nd Year Representative</span><h3>Aswin</h3></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">DD</div><span class="role">Operations</span><h3>Deeya DA</h3></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">DA</div><span class="role">Operations</span><h3>Dev Anand A L</h3></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">D</div><span class="role">4th Year Representative</span><h3>Devna</h3></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">H</div><span class="role">Documentation</span><h3>Hemand</h3></article>
+  <div class="branch-connector" aria-hidden="true"><span></span></div>
 
-<article class="member"><div class="member-avatar" aria-hidden="true">KV</div><span class="role">Operations</span><h3>Krishnapriya V</h3></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">L</div><span class="role">3rd Year Representative</span><h3>Lubaba</h3></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">MA</div><span class="role">Design & Media</span><h3>Muhammed Afham C</h3></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">SS</div><span class="role">Design & Media</span><h3>Sajna Stanly</h3></article>
-<article class="member"><div class="member-avatar" aria-hidden="true">MS</div><span class="role">Design & Media</span><h3>Mohammed Sinan</h3></article></div>
+  <div class="leadership-peers">
+    <div class="peer-node">
+      <span class="hierarchy-label">STUDENT LEADERSHIP</span>
+      <article class="leader-card student-leader">
+        <div class="silhouette" aria-hidden="true"></div>
+        <div><span class="role">Student Coordinator</span><h3>Kashinath</h3></div>
+      </article>
+    </div>
+    <div class="peer-node">
+      <span class="hierarchy-label">STUDENT COORDINATION TEAM</span>
+      <article class="leader-card team-leader">
+        <div class="silhouette" aria-hidden="true"></div>
+        <div><span class="role">Student Coordination Team</span><h3>Adhi</h3></div>
+      </article>
+    </div>
+  </div>
+
+  <div class="executive-heading"><span class="hierarchy-label">EXECUTIVE COMMITTEE · GROUPED BY POSITION</span></div>
+  <div class="position-groups">
+    <section class="position-group"><h3>Documentation</h3><div class="position-members">
+      <article class="member"><span class="role">Documentation</span><h3>Akshay Das</h3></article>
+      <article class="member"><span class="role">Documentation</span><h3>Hemand</h3></article>
+    </div></section>
+    <section class="position-group"><h3>Program Committee</h3><div class="position-members">
+      <article class="member"><span class="role">Program Committee</span><h3>Adithyan</h3></article>
+      <article class="member"><span class="role">Program Committee</span><h3>Anna</h3></article>
+      <article class="member"><span class="role">Program Committee</span><h3>Anusree</h3></article>
+    </div></section>
+    <section class="position-group"><h3>Year Representatives</h3><div class="position-members">
+      <article class="member"><span class="role">4th Year Representative</span><h3>Akshith K</h3></article>
+      <article class="member"><span class="role">4th Year Representative</span><h3>Devna</h3></article>
+      <article class="member"><span class="role">3rd Year Representative</span><h3>Lubaba</h3></article>
+      <article class="member"><span class="role">2nd Year Representative</span><h3>Aswin</h3></article>
+    </div></section>
+    <section class="position-group"><h3>Operations</h3><div class="position-members">
+      <article class="member"><span class="role">Operations</span><h3>Amnith</h3></article>
+      <article class="member"><span class="role">Operations</span><h3>Deeya DA</h3></article>
+      <article class="member"><span class="role">Operations</span><h3>Dev Anand A L</h3></article>
+      <article class="member"><span class="role">Operations</span><h3>Krishnapriya V</h3></article>
+    </div></section>
+    <section class="position-group"><h3>Design & Media</h3><div class="position-members">
+      <article class="member"><span class="role">Design & Media</span><h3>Muhammed Afham C</h3></article>
+      <article class="member"><span class="role">Design & Media</span><h3>Sajna Stanly</h3></article>
+      <article class="member"><span class="role">Design & Media</span><h3>Mohammed Sinan</h3></article>
+    </div></section>
+  </div>
+</div>
 <p class="edit-note">Student portfolios are shown with initials until the individual profile photographs are added.</p></section></main><footer class="footer"><div class="footer-inner"><a class="footer-brand" href="index.html"><img src="DFC%20LOGO.png" alt=""><div><strong>DEFENCE FOCUS CLUB · TKMCE</strong><br><small>Purpose · Discipline · Service</small></div></a><div class="footer-links"><a href="about.html">About</a><a href="services.html">Services</a><a href="events.html">Events</a><a href="execom.html">Execom</a></div><small>© <span id="year"></span> Defence Focus Club, TKMCE</small></div></footer><script>const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');if(menuBtn&&navLinks){menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')))}const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();const reveals=document.querySelectorAll('.section-head,.intro-photo,.intro-copy,.vm-card,.event-card,.focus-card,.member,.leader-card,.faq-item,.service-tile,.film-copy');reveals.forEach(el=>el.classList.add('reveal'));if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.08});reveals.forEach(el=>io.observe(el))}else reveals.forEach(el=>el.classList.add('is-visible'));const track=document.getElementById('eventTrack'),prev=document.getElementById('prevEvent'),next=document.getElementById('nextEvent');if(track&&prev&&next){prev.addEventListener('click',()=>track.scrollBy({left:-track.clientWidth*.8,behavior:'smooth'}));next.addEventListener('click',()=>track.scrollBy({left:track.clientWidth*.8,behavior:'smooth'}))}</script></body></html>
