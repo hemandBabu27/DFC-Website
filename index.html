@@ -187,6 +187,52 @@ html{scroll-behavior:auto}.section{padding:64px 28px}.section-head{margin-bottom
 .site-header .nav-links a{font-size:13px;white-space:nowrap}
 @media(max-width:1050px){.site-header .nav-wrap{gap:12px}.site-header .brand{min-width:290px;gap:13px}.site-header .brand img{width:86px;height:86px;flex-basis:86px}.site-header .brand strong{font-size:21px}.site-header .brand small{font-size:13px}.site-header .nav-links{gap:9px}.site-header .nav-links a{font-size:12px}}
 @media(max-width:650px){.site-header .nav-wrap{padding:9px 16px}.site-header .brand{min-width:0;gap:11px}.site-header .brand img{width:74px;height:74px;flex-basis:74px}.site-header .brand strong{font-size:19px;white-space:normal}.site-header .brand small{font-size:12px;margin-top:4px}.site-header .menu-btn{flex:0 0 auto}}
+
+/* DFC visual cleanup: remove decorative soldier silhouettes and improve readability */
+img[src*="soldier-"], img[src*="soldier_illustration"], object[data*="soldier-"],
+[class*="soldier-illustration"], [class*="soldier-silhouette"], [id*="soldier-"],
+.silhouette { display:none !important; }
+body { font-size:18px; }
+body p { font-size:18px; line-height:1.75; }
+.site-header .nav-wrap { max-width:1560px; padding:16px clamp(22px,3vw,48px); gap:24px; }
+.site-header .brand { min-width:360px; gap:20px; }
+.site-header .brand img { width:clamp(96px,7.5vw,126px); height:clamp(96px,7.5vw,126px); flex:0 0 auto; }
+.site-header .brand strong { font-size:clamp(25px,2vw,32px); line-height:1.08; }
+.site-header .brand small { font-size:16px; margin-top:7px; }
+.site-header .nav-links { gap:clamp(10px,1.2vw,20px); }
+.site-header .nav-links a { font-size:15px; }
+.page-intro { padding-top:64px; padding-bottom:64px; }
+.page-intro h1 { font-size:clamp(46px,5vw,66px); line-height:1.05; }
+.page-intro p { font-size:19px; }
+.section-head h2, .intro-copy h2 { font-size:clamp(38px,4.2vw,56px); }
+.section-head p, .intro-copy p { font-size:18px; }
+.focus-card h3, .home-links h3 { font-size:26px; }
+.focus-card p, .home-links p { font-size:17px; }
+.member h3, .leader-card h3 { font-size:19px; }
+.member p, .leader-card p { font-size:15px; }
+.footer-brand strong { font-size:16px; }
+.footer-links, .footer small { font-size:14px; }
+@media(max-width:1050px) {
+ .site-header .nav-wrap { position:relative; }
+ .site-header .brand { min-width:0; }
+ .site-header .menu-btn { display:block; font-size:20px; padding:10px 14px; }
+ .site-header .nav-links { display:none; position:absolute; top:100%; left:0; right:0; z-index:30; padding:20px 28px 24px; background:var(--navy,#102b4d); flex-direction:column; align-items:stretch; gap:8px; border-top:1px solid #ffffff24; box-shadow:0 12px 24px #06162930; }
+ .site-header .nav-links.open { display:flex; }
+ .site-header .nav-links a { font-size:17px; padding:8px 0; }
+ .site-header .nav-links .ai-link { text-align:center; }
+}
+@media(max-width:650px) {
+ .site-header .nav-wrap { padding:12px 16px; }
+ .site-header .brand { gap:12px; }
+ .site-header .brand img { width:78px; height:78px; }
+ .site-header .brand strong { font-size:20px; white-space:normal; }
+ .site-header .brand small { font-size:12px; }
+ body, body p { font-size:16px; }
+ .page-intro h1 { font-size:clamp(38px,10vw,50px); }
+ .page-intro p { font-size:16px; }
+ .section-head h2, .intro-copy h2 { font-size:36px; }
+}
+
 </style></head><body><header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><img src="DFC%20LOGO.png" alt="Defence Focus Club logo"><span><strong>DEFENCE FOCUS CLUB</strong><small>TKM COLLEGE OF ENGINEERING</small></span></a><button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button><nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">The Services</a><a href="activities.html">What We Do</a><a href="events.html">Events</a><a href="execom.html">Execom</a><a class="ai-link" href="../index.html">Defence Track AI ↗</a></nav></div></header><main><section class="hero hero-home hero-video-backdrop">
   <div class="hero-video-layer" aria-hidden="true"><iframe id="armyBackdropVideo" src="https://www.youtube-nocookie.com/embed/9O1a1CLQcuw?autoplay=1&mute=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&modestbranding=1&rel=0&playsinline=1&loop=1&playlist=9O1a1CLQcuw" title="Indian Army official video background" tabindex="-1" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
   <div class="hero-video-shade"></div>
