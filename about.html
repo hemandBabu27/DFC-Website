@@ -119,6 +119,52 @@ html{scroll-behavior:auto}.section{padding:64px 28px}.section-head{margin-bottom
 /* Stronger club identity in the primary navigation */
 .brand{gap:15px;min-width:270px}.brand img{width:82px;height:82px}.brand strong{font-size:21px;letter-spacing:.055em}.brand small{font-size:14px;margin-top:5px}
 @media(max-width:650px){.brand{gap:10px}.brand img{width:66px;height:66px}.brand strong{font-size:17px}.brand small{font-size:11px}}
+
+/* DFC visual cleanup: remove decorative soldier silhouettes and improve readability */
+img[src*="soldier-"], img[src*="soldier_illustration"], object[data*="soldier-"],
+[class*="soldier-illustration"], [class*="soldier-silhouette"], [id*="soldier-"],
+.silhouette { display:none !important; }
+body { font-size:18px; }
+body p { font-size:18px; line-height:1.75; }
+.site-header .nav-wrap { max-width:1560px; padding:16px clamp(22px,3vw,48px); gap:24px; }
+.site-header .brand { min-width:360px; gap:20px; }
+.site-header .brand img { width:clamp(96px,7.5vw,126px); height:clamp(96px,7.5vw,126px); flex:0 0 auto; }
+.site-header .brand strong { font-size:clamp(25px,2vw,32px); line-height:1.08; }
+.site-header .brand small { font-size:16px; margin-top:7px; }
+.site-header .nav-links { gap:clamp(10px,1.2vw,20px); }
+.site-header .nav-links a { font-size:15px; }
+.page-intro { padding-top:64px; padding-bottom:64px; }
+.page-intro h1 { font-size:clamp(46px,5vw,66px); line-height:1.05; }
+.page-intro p { font-size:19px; }
+.section-head h2, .intro-copy h2 { font-size:clamp(38px,4.2vw,56px); }
+.section-head p, .intro-copy p { font-size:18px; }
+.focus-card h3, .home-links h3 { font-size:26px; }
+.focus-card p, .home-links p { font-size:17px; }
+.member h3, .leader-card h3 { font-size:19px; }
+.member p, .leader-card p { font-size:15px; }
+.footer-brand strong { font-size:16px; }
+.footer-links, .footer small { font-size:14px; }
+@media(max-width:1050px) {
+ .site-header .nav-wrap { position:relative; }
+ .site-header .brand { min-width:0; }
+ .site-header .menu-btn { display:block; font-size:20px; padding:10px 14px; }
+ .site-header .nav-links { display:none; position:absolute; top:100%; left:0; right:0; z-index:30; padding:20px 28px 24px; background:var(--navy,#102b4d); flex-direction:column; align-items:stretch; gap:8px; border-top:1px solid #ffffff24; box-shadow:0 12px 24px #06162930; }
+ .site-header .nav-links.open { display:flex; }
+ .site-header .nav-links a { font-size:17px; padding:8px 0; }
+ .site-header .nav-links .ai-link { text-align:center; }
+}
+@media(max-width:650px) {
+ .site-header .nav-wrap { padding:12px 16px; }
+ .site-header .brand { gap:12px; }
+ .site-header .brand img { width:78px; height:78px; }
+ .site-header .brand strong { font-size:20px; white-space:normal; }
+ .site-header .brand small { font-size:12px; }
+ body, body p { font-size:16px; }
+ .page-intro h1 { font-size:clamp(38px,10vw,50px); }
+ .page-intro p { font-size:16px; }
+ .section-head h2, .intro-copy h2 { font-size:36px; }
+}
+
 </style></head><body><header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><img src="DFC%20LOGO.png" alt="Defence Focus Club logo"><span><strong>DEFENCE FOCUS CLUB</strong><small>TKM COLLEGE OF ENGINEERING</small></span></a><button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button><nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">The Services</a><a href="activities.html">What We Do</a><a href="events.html">Events</a><a href="execom.html">Execom</a><a class="ai-link" href="../index.html">Defence Track AI ↗</a></nav></div></header><main><section class="page-intro"><div class="eyebrow">Defence Focus Club · TKMCE</div><h1>About</h1><p>Get to know the student community, its purpose and the values behind Defence Focus Club.</p></section><section class="section" id="about"><div class="intro-grid"><div class="intro-photo"><span class="photo-caption">Purpose · Discipline · Service</span></div><div class="intro-copy"><div class="eyebrow">Who we are</div><h2>A campus community with a call to serve.</h2><p>Defence Focus Club (DFC), TKMCE, brings students together to explore defence careers, learn from experts and build leadership through awareness, teamwork and purposeful activities.</p><div class="values-row"><div class="value"><strong>Awareness</strong><span>Explore opportunities</span></div><div class="value"><strong>Leadership</strong><span>Grow with purpose</span></div><div class="value"><strong>Community</strong><span>Learn together</span></div></div></div></div></section>
 
 </main><footer class="footer"><div class="footer-inner"><a class="footer-brand" href="index.html"><img src="DFC%20LOGO.png" alt=""><div><strong>DEFENCE FOCUS CLUB · TKMCE</strong><br><small>Purpose · Discipline · Service</small></div></a><div class="footer-links"><a href="about.html">About</a><a href="services.html">Services</a><a href="events.html">Events</a><a href="execom.html">Execom</a></div><small>© <span id="year"></span> Defence Focus Club, TKMCE</small></div></footer><script>const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');if(menuBtn&&navLinks){menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')))}const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();const reveals=document.querySelectorAll('.section-head,.intro-photo,.intro-copy,.vm-card,.event-card,.focus-card,.member,.leader-card,.faq-item,.service-tile,.film-copy');reveals.forEach(el=>el.classList.add('reveal'));if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.08});reveals.forEach(el=>io.observe(el))}else reveals.forEach(el=>el.classList.add('is-visible'));const track=document.getElementById('eventTrack'),prev=document.getElementById('prevEvent'),next=document.getElementById('nextEvent');if(track&&prev&&next){prev.addEventListener('click',()=>track.scrollBy({left:-track.clientWidth*.8,behavior:'smooth'}));next.addEventListener('click',()=>track.scrollBy({left:track.clientWidth*.8,behavior:'smooth'}))}</script></body></html>
