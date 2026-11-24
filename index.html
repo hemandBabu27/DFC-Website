@@ -326,6 +326,55 @@ p{line-height:1.75}
  .hero-video-backdrop .hero-inner .hero-club-tagline{font-size:11px;letter-spacing:.18em;margin-top:18px}
 }
 
+
+/* Final homepage alignment and clean header edge */
+.site-header{border-bottom:0 !important;box-shadow:none !important}
+.hero-video-backdrop .hero-layout{
+  justify-content:center !important;
+  text-align:center !important;
+  padding:58px 28px 72px !important;
+}
+.hero-video-backdrop .hero-inner{
+  width:100% !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:28px 0 !important;
+  text-align:center !important;
+}
+.hero-video-backdrop .hero-inner h1{
+  width:100% !important;
+  max-width:100% !important;
+  margin:0 auto !important;
+  font-size:clamp(48px,5.1vw,76px) !important;
+  line-height:1.12 !important;
+  letter-spacing:-.035em !important;
+  white-space:normal !important;
+  text-align:center !important;
+}
+.hero-video-backdrop .hero-inner h1 span{
+  display:inline !important;
+  margin-left:.12em !important;
+}
+.hero-video-backdrop .hero-inner .hero-club-tagline{
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+  width:max-content;
+  max-width:100%;
+  margin:24px auto 0 !important;
+  text-align:center !important;
+}
+@media(max-width:900px){
+ .hero-video-backdrop .hero-layout{padding:48px 24px !important}
+ .hero-video-backdrop .hero-inner h1{font-size:clamp(42px,6.5vw,64px) !important}
+}
+@media(max-width:650px){
+ .hero-video-backdrop .hero-layout{padding:42px 18px !important}
+ .hero-video-backdrop .hero-inner h1{font-size:clamp(36px,9vw,52px) !important;line-height:1.12 !important}
+ .hero-video-backdrop .hero-inner h1 span{margin-left:0 !important}
+ .hero-video-backdrop .hero-inner .hero-club-tagline{margin-top:18px !important;font-size:10px !important}
+}
+
 </style></head><body><header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><img src="DFC%20LOGO.png" alt="Defence Focus Club logo"><span><strong>DEFENCE FOCUS CLUB</strong><small>TKM COLLEGE OF ENGINEERING</small></span></a><button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button><nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">The Services</a><a href="activities.html">What We Do</a><a href="events.html">Events</a><a href="execom.html">Execom</a><a class="ai-link" href="../index.html">Defence Track AI ↗</a></nav></div></header><main><section class="hero hero-home hero-video-backdrop">
   <div class="hero-video-layer" aria-hidden="true"><video id="dfcHomeBackdrop" autoplay muted loop playsinline preload="auto"><source src="https://www.dropbox.com/scl/fi/vdkb0xmqp715k7pp0x26j/dfc-backdrop.mp4?rlkey=yo92sfzq3mrfssdbidwnse9yi&raw=1" type="video/mp4"></video></div>
   <div class="hero-video-shade"></div>
